@@ -15,7 +15,8 @@ public class Controller {
     @GetMapping
     public ProductResponse findAll() {
         log.info("Searching All Products");
-        return productClient.getPosts();
+        ProductResponse posts = productClient.getPosts();
+        return posts;
     }
 
 }
